@@ -15,7 +15,7 @@
 .button.ghost-button {
   color: #333;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #0000;
   border: 2px solid #333;
   border-radius: 60px;
   min-width: 150px;
@@ -61,7 +61,7 @@
   float: none;
   clear: none;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #0000;
   border: 0 solid #000;
   justify-content: space-between;
   align-items: center;
@@ -70,10 +70,7 @@
   line-height: 40px;
   display: flex;
   position: relative;
-  top: 0%;
-  bottom: auto;
-  left: 0%;
-  right: 0%;
+  inset: 0% 0% auto;
 }
 
 .navigation-wrapper {
@@ -82,12 +79,8 @@
   border-bottom: 2px solid #000;
   padding-left: 0;
   padding-right: 0;
-  position: -webkit-sticky;
   position: sticky;
-  top: 100%;
-  bottom: auto;
-  left: 0%;
-  right: 0%;
+  inset: 100% 0% auto;
 }
 
 .image-3 {
@@ -138,7 +131,6 @@
 }
 
 .kbf-container.relative.header-container-mobile {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -283,7 +275,6 @@
   margin-bottom: 40px;
   padding: 72px 72px 18px;
   display: flex;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
@@ -291,7 +282,6 @@
 .company-info-text {
   color: #fff;
   text-transform: uppercase;
-  max-width: 270px;
   padding-right: 30px;
   font-family: Twkeverett Web, sans-serif;
   font-size: 14px;
@@ -364,7 +354,7 @@
 
 .ghost-input {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #0000;
   border: 2px solid #fff;
   width: 100%;
   height: 62px;
@@ -377,15 +367,12 @@
 
 .submit-button {
   position: absolute;
-  top: 0%;
-  bottom: auto;
-  left: auto;
-  right: 0%;
+  inset: 0% 0% auto auto;
 }
 
 .submit-button.image-submit {
-  color: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
+  color: #0000;
+  background-color: #0000;
   background-image: url('../images/Arrow-Yellow.svg');
   background-position: 100%;
   background-repeat: no-repeat;
@@ -398,8 +385,8 @@
 }
 
 .submit-button.green-newsletter-image-submit {
-  color: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
+  color: #0000;
+  background-color: #0000;
   background-image: url('../images/Arrow-Big-White.svg');
   background-position: 100%;
   background-repeat: no-repeat;
@@ -515,6 +502,10 @@
   display: flex;
 }
 
+.media-link-block.white {
+  color: #fff;
+}
+
 .buy-tickets-wrapper {
   justify-content: space-between;
   align-items: center;
@@ -544,10 +535,7 @@
   padding-bottom: 70px;
   display: flex;
   position: fixed;
-  top: 0;
-  bottom: 178px;
-  left: auto;
-  right: -65vw;
+  inset: 0 -65vw 178px auto;
   overflow: auto;
 }
 
@@ -561,10 +549,7 @@
 
 .hidden-drag {
   position: fixed;
-  top: auto;
-  bottom: 0%;
-  left: -100vw;
-  right: auto;
+  inset: auto auto 0% -100vw;
 }
 
 .logo-newsletter-wrapper {
@@ -612,12 +597,12 @@
 }
 
 .green-error-message {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #0000;
 }
 
 .ghost-input-black-single-border {
   color: #333;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #0000;
   border: 0 solid #000;
   margin-bottom: -2px;
   padding-left: 0;
@@ -661,8 +646,6 @@
 
 .splide__slide {
   flex: none;
-  width: 100vw;
-  height: 100lvh;
 }
 
 .splide__slide.full {
@@ -805,6 +788,62 @@
   flex-direction: column;
   width: 260px;
   display: flex;
+}
+
+.google-arts-embed-grid {
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  background-color: #fff;
+  flex-flow: wrap;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  padding-bottom: 72px;
+  display: block;
+  position: relative;
+}
+
+.google-arts-embed-grid.splide {
+  padding-bottom: 0;
+}
+
+.ga-embed {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  min-width: 100%;
+}
+
+.ga-media-links {
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.ga-media-links.mobile {
+  display: none;
+}
+
+.ga_splide__arrows.splide__arrows {
+  mix-blend-mode: difference;
+  position: absolute;
+  inset: auto auto 100px 72px;
+}
+
+.splide__arrow {
+  background-color: #0000;
+  background-image: url('../images/arrow.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 42px 32px;
+  width: 42px;
+  padding: 20px;
+}
+
+.splide__arrow.splide__arrow--next {
+  transform: rotate(180deg);
 }
 
 @media screen and (min-width: 1280px) {
@@ -982,7 +1021,6 @@
   }
 
   .navbar {
-    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -1103,6 +1141,11 @@
     padding-top: 40px;
   }
 
+  .media-link-block.white {
+    border-top: 2px solid #fff;
+    padding: 26px 36px;
+  }
+
   .company-info {
     width: 100%;
   }
@@ -1137,6 +1180,24 @@
   .link {
     color: var(--white);
     text-decoration: none;
+  }
+
+  .google-arts-embed-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ga-media-links {
+    display: none;
+  }
+
+  .ga-media-links.mobile {
+    border-bottom: 2px solid #fff;
+    display: block;
+  }
+
+  .ga_splide__arrows.splide__arrows {
+    bottom: 64px;
+    left: 24px;
   }
 }
 
@@ -1275,10 +1336,7 @@
     width: 44px;
     height: 31px;
     position: absolute;
-    top: 50%;
-    bottom: auto;
-    left: auto;
-    right: 24px;
+    inset: 50% 24px auto auto;
     transform: translate(0, -50%);
   }
 
@@ -1314,6 +1372,11 @@
     line-height: 21px;
   }
 
+  .media-link-block.white {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
   .company-info {
     flex-direction: column;
     align-items: flex-start;
@@ -1322,6 +1385,11 @@
   .slide-overlay {
     width: 100vw;
     right: -100vw;
+  }
+
+  .kbf-main-min-h {
+    height: auto;
+    min-height: auto;
   }
 
   .green-newsletter-label {
@@ -1362,7 +1430,17 @@
   }
 
   .splide__slide.full {
-    height: calc(100vh - 78px);
+    width: auto;
+    height: 273px;
+  }
+
+  .banner-slider-image {
+    width: auto;
+  }
+
+  .banner-slider-image.full {
+    width: auto;
+    height: 100%;
   }
 
   .brand-2 {
@@ -1409,6 +1487,21 @@
     height: 46px;
     padding-left: 18px;
     display: block;
+  }
+
+  .google-arts-embed-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ga-embed {
+    aspect-ratio: 4 / 5;
+  }
+
+  .ga-media-links {
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -1499,11 +1592,6 @@
 
   .cross-icon {
     margin-top: 10px;
-  }
-
-  .kbf-main-min-h {
-    height: calc(100vh - 88px);
-    min-height: calc(100vh - 88px);
   }
 
   .overlay-cross {
